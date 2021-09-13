@@ -163,13 +163,12 @@ function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
-  let booleano = true;
-  for (let i = 0; i > arreglo.length; i++) {
-    if(arreglo[i] !== arreglo[i++]){
-      return booleano = false;
+  for (let i = 0; i < arreglo.length - 1; i++) {
+    if(arreglo[i] !== arreglo[i+1]){
+      return false;
     }
     }
-  return booleano;
+  return true;
 } 
 
 
@@ -213,6 +212,18 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
+  let array = [];
+  let suma = numero;
+  for(let i = 0; i < 10; i++) {
+    suma = suma + 2;
+    if(suma === i) {
+      return 'Se interrumpió la ejecución';      
+    }
+    else {
+      array.push(suma);
+    }
+  }
+  return array;
 }
 
 
@@ -223,6 +234,16 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
+  let array = [];
+  let suma = numero;
+  for(let i = 0; i < 10; i++) {
+    if(i === 5) continue;
+    else {
+      suma = suma + 2;
+      array.push(suma);
+    }
+  }
+    return array;  
 }
 
 
